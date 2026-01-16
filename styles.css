@@ -1,0 +1,93 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --accent: #38bdf8;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Button container */
+.buttons-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Options container */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  list-style-type: decimal; /* Makes the list ordered */
+}
+
+.option {
+  padding: 8px 16px;
+  margin: 5px 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Container for the second set of boxes, side by side */
+.side-by-side-boxes {
+  display: flex;
+  gap: 20px;               /* Add space between the boxes */
+  justify-content: flex-start;  /* Align boxes to the left */
+  margin-top: 20px;
+  flex-wrap: wrap;             /* Allow wrapping if the screen is small */
+}
+
+/* Styling for each right-side box */
+.right-box {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 30%;                 /* Set width of each box */
+  color: white;
+  border-radius: 5px;
+  box-sizing: border-box;     /* Ensures padding doesn't cause overflow */
+}
+
+/* Ensure headings are styled properly */
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Optional smooth transitions for second option boxes */
+.side-by-side-boxes .right-box {
+  transition: transform 0.3s ease; /* Optional: smooth transition */
+}
